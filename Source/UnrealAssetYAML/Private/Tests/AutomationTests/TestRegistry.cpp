@@ -14,12 +14,12 @@ bool FTestRegistry_BasicDispatch::RunTest(const FString& Parameters)
 	FYamlAssetRegistry::UnregisterAll();
 
 	bool bExportCalled = false;
-	FYamlAssetRegistry::Register<UObject>(
-		[&](const UObject* Asset, FYamlExportContext& Ctx) { bExportCalled = true; },
-		[&](FYamlImportContext& Ctx, UObject* Asset) {}
+	FYamlAssetRegistry::Register<UTexture2D>(
+		[&](const UTexture2D* Asset, FYamlExportContext& Ctx) { bExportCalled = true; },
+		[&](FYamlImportContext& Ctx, UTexture2D* Asset) {}
 	);
 
-	UObject* Obj = NewObject<UObject>(GetTransientPackage());
+	UTexture2D* Obj = NewObject<UTexture2D>(GetTransientPackage());
 	YAML::Node OutNode;
 	bool bResult = FYamlAssetRegistry::TryExport(Obj, OutNode);
 
@@ -38,7 +38,7 @@ bool FTestRegistry_UnregisteredReturnsFalse::RunTest(const FString& Parameters)
 {
 	FYamlAssetRegistry::UnregisterAll();
 
-	UObject* Obj = NewObject<UObject>(GetTransientPackage());
+	UTexture2D* Obj = NewObject<UTexture2D>(GetTransientPackage());
 	YAML::Node OutNode;
 	bool bResult = FYamlAssetRegistry::TryExport(Obj, OutNode);
 
