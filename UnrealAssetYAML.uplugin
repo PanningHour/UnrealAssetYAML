@@ -1,0 +1,21 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "0.1.0",
+	"FriendlyName": "Unreal Asset YAML",
+	"Description": "UE5 Asset YAML Serializer/Deserializer",
+	"Category": "Developer Tools",
+	"CreatedBy": "PanningHour",
+	"CreatedByURL": "https://github.com/PanningHour",
+	"CanContainContent": false,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "UnrealAssetYAML",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
