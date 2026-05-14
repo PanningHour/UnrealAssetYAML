@@ -24,5 +24,6 @@ public class UnrealAssetYAML : ModuleRules
 		string ThirdPartyPath = Path.Combine(ModuleDirectory, "..", "ThirdParty", "yaml-cpp");
 		PublicIncludePaths.Add(Path.Combine(ThirdPartyPath, "include"));
 		PublicAdditionalLibraries.Add(Path.Combine(ThirdPartyPath, "lib", "Win64", "yaml-cpp.lib"));
+		PublicDefinitions.Add("YAML_CPP_STATIC_DEFINE");
 	}
 }
