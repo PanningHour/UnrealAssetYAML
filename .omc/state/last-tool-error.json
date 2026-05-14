@@ -1,7 +1,0 @@
-{
-  "tool_name": "PowerShell",
-  "tool_input_preview": "{\"command\":\"Get-Content \\\"C:\\\\Dallokan\\\\.omc\\\\test_phase1.log\\\" -Tail 50 -ErrorAction SilentlyContinue\",\"description\":\"Check UE log file\"}",
-  "error": "Exit code 1",
-  "timestamp": "2026-05-14T13:16:29.803Z",
-  "retry_count": 1
-}
